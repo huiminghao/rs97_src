@@ -1,5 +1,5 @@
 TARGET = sdlpal.dge
-DEBUG=0
+DEBUG ?= 0
 
 ifeq ($(DEBUG),0)
   CROSS_COMPILE=mipsel-linux-

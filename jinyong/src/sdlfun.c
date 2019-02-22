@@ -453,7 +453,7 @@ int JY_PlayMIDI(const char *filename)
 	currentMusic=Mix_LoadMUS(filename);
 
 	if(currentMusic==NULL){
-		JY_Error("Open music file %s failed!",filename);
+		JY_Error("Open music file %s failed! error:%s",filename,Mix_GetError());
 		return 1;
 	}
 

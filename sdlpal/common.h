@@ -22,7 +22,7 @@
 #define _COMMON_H
 
 //#define PAL_WIN95          1 // not valid for now
-//#define PAL_CLASSIC        1
+#define PAL_CLASSIC        0
 
 #ifdef __cplusplus
 extern "C"
@@ -149,7 +149,7 @@ FILE *MY_fopen(const char *path, const char *mode);
 #define PAL_PREFIX            "./"
 #endif
 #ifndef PAL_SAVE_PREFIX
-#define PAL_SAVE_PREFIX       "/mnt/int_sd/games/sdlpal/sdlpal/"
+#define PAL_SAVE_PREFIX       "./"
 #endif
 
 #endif

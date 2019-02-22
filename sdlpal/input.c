@@ -164,16 +164,13 @@ PAL_KeyboardEventFilter(
          g_InputState.dwKeyPress = kKeySearch;
          break;
 #else
-      case SDLK_ESCAPE:
       case SDLK_INSERT:
-      case SDLK_LALT:
       case SDLK_RALT:
       case SDLK_KP0:
+      case SDLK_LALT:
          g_InputState.dwKeyPress |= kKeyMenu;
          break;
 
-      case SDLK_RETURN:
-      case SDLK_SPACE:
       case SDLK_KP_ENTER:
       case SDLK_LCTRL:
          g_InputState.dwKeyPress |= kKeySearch;
@@ -191,36 +188,44 @@ PAL_KeyboardEventFilter(
 
       case SDLK_7: //7 for mobile device
       case SDLK_r:
+      case SDLK_BACKSPACE:
          g_InputState.dwKeyPress |= kKeyRepeat;
          break;
 
       case SDLK_2: //2 for mobile device
       case SDLK_a:
+      //case SDLK_3:
          g_InputState.dwKeyPress |= kKeyAuto;
          break;
 
       case SDLK_d:
+      case SDLK_SPACE:
          g_InputState.dwKeyPress |= kKeyDefend;
          break;
 
       case SDLK_e:
+      case SDLK_RETURN:
          g_InputState.dwKeyPress |= kKeyUseItem;
          break;
 
       case SDLK_w:
+      case SDLK_ESCAPE:
          g_InputState.dwKeyPress |= kKeyThrowItem;
          break;
 
       case SDLK_q:
+      case SDLK_END:
          g_InputState.dwKeyPress |= kKeyFlee;
          break;
 
       case SDLK_s:
+      case SDLK_TAB:
          g_InputState.dwKeyPress |= kKeyStatus;
          break;
 
       case SDLK_f:
       case SDLK_5: // 5 for mobile device
+      case SDLK_LSHIFT:
          g_InputState.dwKeyPress |= kKeyForce;
          break;
 
